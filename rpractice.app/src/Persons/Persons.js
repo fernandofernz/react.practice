@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Person = () => {
-    
+const person = () => {
+
 };
 
 
-export default Person;
+export default person;
