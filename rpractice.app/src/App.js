@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Person from './Persons/Persons';
 
 class App extends Component {
+  state = {
+    persons : [
+      {name:'User 1', age: '19'},{name: 'User 2', age: '26'},{name: 'User 3', age: '29'}
+    ]
+  };
+
   render() {
     return (
       <div className="App">
@@ -11,14 +18,14 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <button>Switch Name</button>
+        <Person name= {this.state.persons[0].name} age= {this.state.persons[0].age}/>
+
+        <Person name= {this.state.persons[1].name} age= {this.state.persons[1].age}> 
+         My hobbie is racing!</Person>
+
+        <Person name= {this.state.persons[2].name} age= {this.state.persons[2].age}/>
+
         </header>
       </div>
     );
